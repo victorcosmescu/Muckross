@@ -11,13 +11,13 @@ def hello():
     return render_template('index.html', message=message)
 
 
-@app.route("/app")
-def add():
-    message = "Hello, World"
-    return render_template('index.html', message=message)
+# @app.route("/app")
+#def add():
+#    message = "Hello, World"
+#    return render_template('index.html', message=message)
 
 
 
 # run the application
-if __name__ == "__main__":
-    app.run(debug=True)
+#if __name__ == "__main__":
+#    app.run(debug=True)
