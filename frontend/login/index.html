@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Muckross Riding Stables B&B</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Victor Cosmescu">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../static/css/style.css">
+	<meta name="description" content="Family owened bed and breakfast B&B in Kilarney Co. Kerry, Ireland">
+	<meta name="keywords" content="B&B, Kerry, Ring of Kerry, Bed and Breakfast, horse riding, Ireland">
+</head>
+
+<body>
+<div id="wrapper">
+	<header>
+		<div class="dropdown">
+				<span class="dropdown-button">
+				<div class="ham-menu"></div>
+  				<div class="ham-menu"></div>
+  				<div class="ham-menu"></div>
+  				</span>
+				<div class="dropdown-content">
+					<ul class="nav-links">
+						<a href="../about/index.html"><li class="nav-link-buttons">About</li></a>
+						<a href="../gallery/index.html"><li class="nav-link-buttons">Gallery</li></a>
+						<a href="../see&do/index.html"><li class="nav-link-buttons">See&Do</li></a>
+						<a href="../contact/index.html"><li class="nav-link-buttons">Contact</li></a>
+						<a href="index.html"><li class="nav-link-buttons">Login</li></a>
+					</ul>
+				</div>
+		</div>
+		<ul class="nav-links">
+			<a href="index.html" ><li class="nav-link-buttons">Home</li></a>
+			<a href="about/index.html"><li class="nav-link-buttons">About</li></a>
+			<a href="gallery/index.html"><li class="nav-link-buttons">Gallery</li></a>
+			<a href="see&do/index.html"><li class="nav-link-buttons">See&Do</li></a>
+			<a href="contact/index.html"><li class="nav-link-buttons">Contact</li></a>
+			<a href="login/index.html"><li class="nav-link-buttons">Login</li></a>
+		</ul>
+	</header>
+
+	<main>
+
+		<script>
+			let doIt=()=>{
+  			let tab=document.getElementById("tab1");
+  			let rows=tab1.getElementsByTagName('tr');
+  			fetch('https://victor.dbsprojects.ie:8080/')
+    		.then(response => response.json())
+    		.then(data=>data.Results.forEach(  //.slice(0,3)
+     		 x=>{
+	        let newRow=rows[0].cloneNode(true);
+	        let divs=newRow.getElementsByTagName('td');
+	        divs[0].innerHTML=x['name'];
+	        divs[1].innerHTML=x['start_date'];
+	        divs[2].innerHTML=x['end_date'];
+	        divs[3].innerHTML=x['num_adults'];
+	        divs[4].innerHTML=x['num_children'];
+	        tab1.appendChild(newRow);
+      }
+    )
+  );
+}
+</script>
+</head>
+<body>
+
+<br>Bookings made recently<br/>
+<table id='tab1' bgcolor='white'>
+<tr><td>Name</td><td>Start Date</td><td>End Date</td><td>Number Adults</td><td>Number Children</td></tr><br/>
+<button onClick="doIt()">Press me</button>
+</table></body>
+
+</div>
+	</main>
+</div>
+	<footer>
+		<span>&lt; &copy; Victor Cosmescu 2020 &gt;</span>
+	</footer>
+
+</body>
+</html>

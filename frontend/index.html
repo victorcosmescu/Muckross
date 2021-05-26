@@ -26,6 +26,7 @@
 						<a href="gallery/index.html"><li class="nav-link-buttons">Gallery</li></a>
 						<a href="see&do/index.html"><li class="nav-link-buttons">See&Do</li></a>
 						<a href="contact/index.html"><li class="nav-link-buttons">Contact</li></a>
+						<a href="login/index.html"><li class="nav-link-buttons">Login</li></a>
 					</ul>
 				</div>
 		</div>
@@ -35,6 +36,7 @@
 			<a href="gallery/index.html"><li class="nav-link-buttons">Gallery</li></a>
 			<a href="see&do/index.html"><li class="nav-link-buttons">See&Do</li></a>
 			<a href="contact/index.html"><li class="nav-link-buttons">Contact</li></a>
+			<a href="login/index.html"><li class="nav-link-buttons">Login</li></a>
 		</ul>
 	</header>
 
@@ -46,17 +48,15 @@
 		<h3>~ Inquire about availability ~</h3>
 
 <div class="center">
-	<form class="booking-query" action="http://13.79.216.253/add" method="get" enctype="text/plain">
-		<label for="owner_name">Name:</label>
-		<input type="string" name="owner_name" id="owner_name">
-		<label for="start_date">Check In:</label>
-		<input type="date" name="start_date" id="start_date">
-		<label for="end_date">Check Out:</label>
-		<input type="date" name="end_date" id="end_date">
-		<label for="num_adults">Adults</label>
-		<input type="number" name="num_adults" id="num_adults">
-		<label for="num_kids">Kids</label>
-		<input type="number" name="num_kids" id="num_kids">
+	<form class="booking-query" action="mailto:victorcosmescu@yahoo.com" method="post" enctype="text/plain">
+		<label for="startdate">Check In:</label>
+		<input type="date" name="startdate" id="startdate">
+		<label for="enddate">Check Out:</label>
+		<input type="date" name="enddate" id="enddate">
+		<label for="adults">Adults</label>
+		<input type="number" name="adults">
+		<label for="kids">Kids</label>
+		<input type="number" name="kids">
 		<input type="submit" name="submit">
 	</form>
 
