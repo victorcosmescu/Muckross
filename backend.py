@@ -12,18 +12,10 @@ BOOKING_NUM_CHILDREN_KEY = "num_kids"
 BOOKING_OWNER_NAME_KEY = "owner_name"
 
 
-def defaultconverter(obj):
-    if isinstance(obj, datetime):
-        return obj.date.__str__()
-
-class DateTimeEncoder(JSONEncoder):
-        #Override the default method
-        def default(self, obj):
-            if isinstance(obj, (
-                datetime.date, datetime.datetime)):
-                return obj.isoformat()
-
 class Booking:
+    '''
+    Class representing a booking. This is the in memory representation off a booking
+    '''
     def __init__(self, start_date, end_date, num_adults, num_children, owner_name):
         self.date_format = '%Y-%m-%d %H:%M:%S'
         self.start_date = start_date
@@ -36,14 +28,24 @@ class Booking:
         return self.start_date, self.end_date, self.num_adults, self.num_children, self.owner_name
 
 
-class DataBaseInteractor: # connection to db
+class DataBaseInteractor:
+    '''
+    This class intermediates the communication with the database.
+    Upon instantiation it uses all the necessary information for a valid connection using the mysql 
+    connector.
+    The typical interaction would be to open a connection, create a cursor execute the needed query
+    and finally close the cursor and the connection
+    '''
     def __init__(self):
         self.user: str = "victor@bookingsproject"
         self.password: str = "Felix2010"
         self.host: str = "bookingsproject.mysql.database.azure.com"
         self.db_name: str = "bookings"
 
-    def _open_connection(self): # connection to db
+    def _open_connection(self):
+        '''
+        This open a connection to the database
+        '''
         try:
             connection = mysql.connector.connect(user=self.user,
                                                  password=self.password,
@@ -61,7 +63,10 @@ class DataBaseInteractor: # connection to db
             connection.close()
             
 
-    def add(self, booking: Booking, table_name="bookings"): # moethod to add bookings to the db
+    def add(self, booking: Booking, table_name="bookings"):
+        '''
+        Adds a booking to the database
+        '''
         connection = self._open_connection()
         cursor = connection.cursor()
 
@@ -75,7 +80,10 @@ class DataBaseInteractor: # connection to db
         cursor.close()
         connection.close()
 
-    def get_bookings(self, table_name="bookings"): #Metodh to get the bookings from the db
+    def get_bookings(self, table_name="bookings"):
+        '''
+        returns the contents of a table from the database in json format
+        '''
         connection = self._open_connection()
         cursor = connection.cursor()
         cursor.execute(f'SELECT*FROM {table_name}')
