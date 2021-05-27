@@ -1,0 +1,162 @@
+ * Serving Flask app "backend" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+78.16.201.7 - - [26/May/2021 09:59:36] "[37mGET / HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 09:59:39] "[37mGET / HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 09:59:56] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 09:59:58] "[37mGET /gallery/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 09:59:59] "[37mGET /see&do/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 09:59:59] "[37mGET /static/assets/Muckross-Traditional-Farms-Horses.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 09:59:59] "[37mGET /static/assets/muckross-house.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 09:59:59] "[37mGET /contact/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:00:00] "[33mGET /js/contact.js HTTP/1.1[0m" 404 -
+78.16.201.7 - - [26/May/2021 10:00:00] "[33mGET /js/contact.js HTTP/1.1[0m" 404 -
+78.16.201.7 - - [26/May/2021 10:00:01] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:00:12] "[37mGET /add?owner_name=victor123455&start_date=2021-05-26&end_date=2021-05-27&num_adults=1&num_kids=2&submit=Submit HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:00:52] "[37mGET / HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:00:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+78.16.201.7 - - [26/May/2021 10:00:52] "[36mGET /static/assets/muckross-riding-stables-b&b.jpg HTTP/1.1[0m" 304 -
+78.16.201.7 - - [26/May/2021 10:01:10] "[37mGET /gallery/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:01:11] "[37mGET /see&do/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:01:12] "[37mGET /contact/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:01:12] "[33mGET /js/contact.js HTTP/1.1[0m" 404 -
+78.16.201.7 - - [26/May/2021 10:01:13] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:01:44] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:01:45] "[37mGET /gallery/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:01:46] "[37mGET /contact/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:01:46] "[33mGET /js/contact.js HTTP/1.1[0m" 404 -
+78.16.201.7 - - [26/May/2021 10:01:47] "[37mGET /see&do/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:01:48] "[37mGET /index.html HTTP/1.1[0m" 200 -
+162.142.125.39 - - [26/May/2021 10:04:12] "[37mGET / HTTP/1.1[0m" 200 -
+162.142.125.39 - - [26/May/2021 10:04:12] "[37mGET / HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:05:53] "[37mGET /contact/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:05:53] "[33mGET /js/contact.js HTTP/1.1[0m" 404 -
+78.16.201.7 - - [26/May/2021 10:05:53] "[33mGET /js/contact.js HTTP/1.1[0m" 404 -
+78.16.201.7 - - [26/May/2021 10:06:43] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:08:01] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:08:03] "[37mGET /see&do/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:08:03] "[37mGET /static/assets/Muckross-Traditional-Farms-Horses.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:08:24] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 10:10:06] "[37mGET /index.html HTTP/1.1[0m" 200 -
+38.88.252.189 - - [26/May/2021 10:28:38] "[37mGET / HTTP/1.0[0m" 200 -
+185.53.90.19 - - [26/May/2021 10:42:27] "[37mGET / HTTP/1.1[0m" 200 -
+71.6.232.4 - - [26/May/2021 11:20:54] "[37mGET / HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 12:06:37] "[37mGET /gallery/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 12:06:38] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 12:06:39] "[37mGET /index.html HTTP/1.1[0m" 200 -
+177.38.5.101 - - [26/May/2021 12:49:15] "[37mGET / HTTP/1.1[0m" 200 -
+172.105.189.111 - - [26/May/2021 14:23:58] "[37mGET / HTTP/1.1[0m" 200 -
+142.93.151.228 - - [26/May/2021 15:01:47] "[37mGET / HTTP/1.0[0m" 200 -
+78.16.201.7 - - [26/May/2021 15:35:12] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 15:35:13] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 15:35:14] "[37mGET /gallery/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 15:35:15] "[37mGET /contact/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 15:35:15] "[33mGET /js/contact.js HTTP/1.1[0m" 404 -
+78.16.201.7 - - [26/May/2021 15:35:15] "[37mGET /see&do/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 15:35:16] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 15:35:40] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+128.14.141.34 - - [26/May/2021 15:44:39] "[37mGET / HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:36:13] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:36:14] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:36:15] "[37mGET /gallery/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:36:17] "[37mGET /contact/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:36:17] "[33mGET /js/contact.js HTTP/1.1[0m" 404 -
+78.16.201.7 - - [26/May/2021 16:36:18] "[37mGET /see&do/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:36:18] "[37mGET /gallery/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:36:19] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:36:19] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:36:37] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.124.226 - - [26/May/2021 16:37:10] "[37mGET / HTTP/1.1[0m" 200 -
+78.16.124.226 - - [26/May/2021 16:37:11] "[37mGET /static/css/style.css HTTP/1.1[0m" 200 -
+78.16.124.226 - - [26/May/2021 16:37:11] "[37mGET /static/assets/muckross-riding-stables-b&b.jpg HTTP/1.1[0m" 200 -
+35.237.4.214 - - [26/May/2021 16:37:15] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.124.226 - - [26/May/2021 16:37:32] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+[2021-05-26 16:37:32,599] ERROR in app: Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "backend.py", line 86, in entry_point_site_with_file
+    Result['num_adults']=row[3]
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/victor/.local/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/victor/.local/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/victor/.local/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/victor/.local/lib/python3.6/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: favicon.ico
+78.16.124.226 - - [26/May/2021 16:37:32] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+78.16.124.226 - - [26/May/2021 16:37:36] "[37mGET /contact/index.html HTTP/1.1[0m" 200 -
+78.16.124.226 - - [26/May/2021 16:37:51] "[37mGET /index.html HTTP/1.1[0m" 200 -
+[2021-05-26 16:37:53,204] ERROR in app: Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "backend.py", line 86, in entry_point_site_with_file
+    Result['num_adults']=row[3]
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/victor/.local/lib/python3.6/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/victor/.local/lib/python3.6/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/victor/.local/lib/python3.6/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/victor/.local/lib/python3.6/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/victor/.local/lib/python3.6/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: favicon.ico
+78.16.124.226 - - [26/May/2021 16:37:53] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+201.182.152.124 - - [26/May/2021 16:39:02] "[37mGET / HTTP/1.1[0m" 200 -
+185.53.90.19 - - [26/May/2021 16:41:11] "[37mGET / HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:27] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:28] "[37mGET /about/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /gallery/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-all-view.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[36mGET /static/js/carousel.js HTTP/1.1[0m" 304 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-pupies.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-double-bedroom.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-horses.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-stables.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-farm.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-b&b-2.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-bedroom.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-bedroom-ensuite.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:29] "[37mGET /static/assets/muckross-riding-stables-diningroom.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:30] "[37mGET /see&do/index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:30] "[37mGET /static/assets/muckross-house.jpg HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:31] "[37mGET /index.html HTTP/1.1[0m" 200 -
+78.16.201.7 - - [26/May/2021 16:46:45] "[37mGET /index.html HTTP/1.1[0m" 200 -

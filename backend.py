@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request
 from datetime import datetime, timedelta
-
-
 import mysql.connector
+import json
+from json import JSONEncoder
 from mysql.connector import errorcode
 
 BOOKING_START_DATE_KEY = "start_date"
@@ -10,6 +10,18 @@ BOOKING_END_DATE_KEY = "end_date"
 BOOKING_NUM_ADULTS_KEY = "num_adults"
 BOOKING_NUM_CHILDREN_KEY = "num_kids"
 BOOKING_OWNER_NAME_KEY = "owner_name"
+
+
+def defaultconverter(obj):
+    if isinstance(obj, datetime):
+        return obj.date.__str__()
+
+class DateTimeEncoder(JSONEncoder):
+        #Override the default method
+        def default(self, obj):
+            if isinstance(obj, (
+                datetime.date, datetime.datetime)):
+                return obj.isoformat()
 
 class Booking:
     def __init__(self, start_date, end_date, num_adults, num_children, owner_name):
@@ -24,14 +36,14 @@ class Booking:
         return self.start_date, self.end_date, self.num_adults, self.num_children, self.owner_name
 
 
-class DataBaseInteractor:
+class DataBaseInteractor: # connection to db
     def __init__(self):
         self.user: str = "victor@bookingsproject"
         self.password: str = "Felix2010"
         self.host: str = "bookingsproject.mysql.database.azure.com"
         self.db_name: str = "bookings"
 
-    def _open_connection(self):
+    def _open_connection(self): # connection to db
         try:
             connection = mysql.connector.connect(user=self.user,
                                                  password=self.password,
@@ -47,8 +59,9 @@ class DataBaseInteractor:
                 print(err)
         else:
             connection.close()
+            
 
-    def add(self, booking: Booking, table_name="bookings"):
+    def add(self, booking: Booking, table_name="bookings"): # moethod to add bookings to the db
         connection = self._open_connection()
         cursor = connection.cursor()
 
@@ -62,8 +75,31 @@ class DataBaseInteractor:
         cursor.close()
         connection.close()
 
+    def get_bookings(self, table_name="bookings"): #Metodh to get the bookings from the db
+        connection = self._open_connection()
+        cursor = connection.cursor()
+        cursor.execute(f'SELECT*FROM {table_name}')
+        data = cursor.fetchall()
+        results = []
+        for row in data:
+            result = {}
+            result[BOOKING_START_DATE_KEY]=row[1]
+            if row[1]:
+                result[BOOKING_START_DATE_KEY]=row[1].strftime("%b %d %Y")
+            result[BOOKING_END_DATE_KEY]=row[2]
+            if row[2]:
+                result[BOOKING_END_DATE_KEY]=row[2].strftime("%b %d %Y")
+            result[BOOKING_NUM_ADULTS_KEY]=row[3]
+            result[BOOKING_NUM_CHILDREN_KEY]=row[4]
+            result[BOOKING_OWNER_NAME_KEY]=row[5]
+            results.append(result)
+        print(results)
+        cursor.close()
+        connection.close()
+        return app.response_class(response=json.dumps(results),status=200, mimetype='application/json')
 
-def add_to_db(start_date, end_date, num_adults, num_children, name):
+
+def add_to_db(start_date, end_date, num_adults, num_children, name): 
     db_interactor = DataBaseInteractor()
     new_entry = Booking(
         start_date=start_date,
@@ -74,34 +110,37 @@ def add_to_db(start_date, end_date, num_adults, num_children, name):
     db_interactor.add(new_entry)
 
 
-
 app = Flask(__name__, template_folder='./frontend', static_folder='./frontend/static')
 
-@app.route('/')
+@app.route('/') #Entry point of the website
 def entry_point_site():
     return render_template('index.html')
 
-@app.route('/<home_index>')
+@app.route('/<home_index>') # entry point to lead to index.html 
 def entry_point_site_with_file(home_index):
     return render_template(f'{home_index}')
 
-@app.route('/about/<about_index>')
+@app.route('/about/<about_index>') # entry point for about page
 def about(about_index):
     return render_template(f'about/{about_index}')
 
-@app.route('/gallery/<gallery_index>')
+@app.route('/gallery/<gallery_index>') # entry point for gallery
 def galery(gallery_index):
     return render_template(f'gallery/{gallery_index}')
 
-@app.route('/contact/<contact_index>')
+@app.route('/contact/<contact_index>') # entry point for contact page
 def contact(contact_index):
     return render_template(f'contact/{contact_index}')
 
-@app.route('/see&do/<see_index>')
+@app.route('/see&do/<see_index>') # entry point for  see&do page
 def see_do(see_index):
     return render_template(f'see&do/{see_index}')
 
-@app.route('/add')
+@app.route('/login/<login_index>') # entry point for login page
+def login(login_index):
+    return render_template(f'login/{login_index}')
+
+@app.route('/add') 
 def add():
     start_date = request.args.get(BOOKING_START_DATE_KEY)
     end_date = request.args.get(BOOKING_END_DATE_KEY)
@@ -111,6 +150,12 @@ def add():
     add_to_db(start_date, end_date, num_adults, num_children, owner_name)
     return render_template('index.html')
 
+@app.route('/get_bookings')
+def get_bookings():
+    db_interactor = DataBaseInteractor()
+    return db_interactor.get_bookings()
+    
+
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port='80')
+    app.run(host='0.0.0.0',port='80')
